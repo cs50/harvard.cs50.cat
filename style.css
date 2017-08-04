@@ -6,6 +6,7 @@
     background-size: 55px 32px;
     box-shadow: inherit;
     color: inherit;
+    display: inline-block !important;
     margin-right: 4px;
     width: 55px;
 }
