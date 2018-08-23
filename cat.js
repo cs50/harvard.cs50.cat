@@ -6,7 +6,7 @@ define(function(require, exports, module) {
     ];
 
     // APIs provided
-    main.provides = ["c9.ide.cs50.cat"];
+    main.provides = ["harvard.cs50.cat"];
 
     // plugin
     return main;
@@ -48,7 +48,7 @@ define(function(require, exports, module) {
 
         // register plugin
         register(null, {
-            "c9.ide.cs50.cat": plugin
+            "harvard.cs50.cat": plugin
         });
     }
 });
