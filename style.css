@@ -1,6 +1,6 @@
 .cs50-cat {
     background-color: inherit !important;
-    background-image: url("@{plugin-path}/cat.png");
+    background-image: url("@{plugin-path}/images/cat.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 55px 32px;
