@@ -1,14 +1,12 @@
 define(function(require, exports, module) {
 
     // APIs consumed
-    main.consumes = [
-        "layout", "Plugin", "settings", "ui"
-    ];
+    main.consumes = ["layout", "Plugin", "settings", "ui"];
 
     // APIs provided
     main.provides = ["harvard.cs50.cat"];
 
-    // plugin
+    // Plugin
     return main;
 
     /**
@@ -16,37 +14,37 @@ define(function(require, exports, module) {
      */
     function main(options, imports, register) {
 
-        // instantiate plugin
-        var plugin = new imports.Plugin("CS50", main.consumes);
+        // Instantiate plugin
+        const plugin = new imports.Plugin("CS50", main.consumes);
 
-        // button for menu
-        var button = null;
+        // Button for menu
+        let button = null;
 
-        // when plugin is loaded
+        // When plugin is loaded
         plugin.on("load", function() {
 
-            // create button
+            // Create button
             button = new imports.ui.button({
                 "skin": "c9-menu-btn",
                 "visible": true
             });
 
-            // load CSS for button
+            // Load CSS for button
             button.setAttribute("class", "cs50-cat");
             imports.ui.insertCss(require("text!./style.css"), options.staticPrefix, plugin);
 
-            // insert button into menu
+            // Insert button into menu
             imports.ui.insertByIndex(imports.layout.findParent({
                 name: "preferences"
             }), button, 1000, plugin);
         });
 
-        // when plugin is unloaded
+        // When plugin is unloaded
         plugin.on("unload", function() {
             button = null;
         });
 
-        // register plugin
+        // Register plugin
         register(null, {
             "harvard.cs50.cat": plugin
         });
