@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
 
     // APIs consumed
-    main.consumes = ["layout", "Plugin", "settings", "ui"];
+    main.consumes = ["layout", "Plugin", "ui"];
 
     // APIs provided
     main.provides = ["harvard.cs50.cat"];
