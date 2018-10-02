@@ -21,7 +21,7 @@ define(function(require, exports, module) {
         let button = null;
 
         // When plugin is loaded
-        plugin.on("load", function() {
+        plugin.on("load", () => {
 
             // Create button
             button = new imports.ui.button({
@@ -40,7 +40,7 @@ define(function(require, exports, module) {
         });
 
         // When plugin is unloaded
-        plugin.on("unload", function() {
+        plugin.on("unload", () => {
             button = null;
         });
 
